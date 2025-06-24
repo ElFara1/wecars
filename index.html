@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>We Cars</title>
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
         <link rel='stylesheet' href='style.css'/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,48 +45,162 @@
     <p>I NOSTRI LAVORI</p>
   </section>
 
-  <section class="blocco blocco4">
-    <img src="./images/img1.jpg" alt="img1" />
-    <img src="./images/img2.jpg" alt="img2" />
-    <img src="./images/img3.jpg" alt="img3" />
-    <img src="./images/img4.jpg" alt="img4" />
-    <img src="./images/img5.jpg" alt="img5" />
-    <img src="./images/img6.jpg" alt="img6" />
-  </section>
+<section class="blocco blocco4-tabs">
+  <div class="tab-selector">
+    <button data-tab="veicoli" class="active">Veicoli Industriali</button>
+    <button data-tab="vetture">Vetture</button>
+    <button data-tab="rimorchi">Rimorchi</button>
+  </div>
+
+  <div class="tab-content" id="veicoli" style="display: flex;">
+    <div class="slideshow-container">
+      <button class="arrow left" onclick="changeSlide('veicoli', -1)">❮</button>
+      <div class="slide-track">
+        <div class="slide">
+          <div class="slide-text">Veicolo 1: Allestimento cassone</div>
+          <img src="./images/ind001-1.jpg" alt="Veicolo 1">
+        </div>
+        <div class="slide">
+          <div class="slide-text">Veicolo 2: Mezzo completo</div>
+          <img src="./images/ind002-1.jpg" alt="Veicolo 2">
+        </div>
+        <div class="slide">
+          <div class="slide-text">Descrizione del contenuto</div>
+          <!-- o image: <img src="…"> oppure video: -->
+          <video muted autoplay loop playsinline>
+            <source src="./images/indvid001.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="slide">
+          <div class="slide-text">Descrizione del contenuto</div>
+          <!-- o image: <img src="…"> oppure video: -->
+          <video muted autoplay loop playsinline>
+            <source src="./images/indvid003.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="slide">
+          <div class="slide-text">Descrizione del contenuto</div>
+          <!-- o image: <img src="…"> oppure video: -->
+          <video muted autoplay loop playsinline>
+            <source src="./images/indvid004.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <button class="arrow right" onclick="changeSlide('veicoli', 1)">❯</button>
+    </div>
+  </div>
+
+  <div class="tab-content" id="vetture">
+    <div class="slideshow-container">
+      <button class="arrow left" onclick="changeSlide('vetture', -1)">❮</button>
+      <div class="slide-track">
+        <div class="slide">
+          <div class="slide-text">Auto 1: SUV 2022</div>
+          <img src="./images/vett01.jpg" alt="Auto 1">
+        </div>
+        <div class="slide">
+          <div class="slide-text">Auto 1: SUV 2022</div>
+          <img src="./images/vett02.jpg" alt="Auto 1">
+        </div>
+        <div class="slide">
+          <div class="slide-text">Auto 1: SUV 2022</div>
+          <img src="./images/vett03.jpg" alt="Auto 1">
+        </div>
+        <div class="slide">
+          <div class="slide-text">Auto 1: SUV 2022</div>
+          <img src="./images/vett04.jpg" alt="Auto 1">
+        </div>
+        <div class="slide">
+          <div class="slide-text">Auto 1: SUV 2022</div>
+          <img src="./images/vett05.jpg" alt="Auto 1">
+        </div>
+        <div class="slide">
+          <div class="slide-text">Auto 1: SUV 2022</div>
+          <img src="./images/vett06.jpg" alt="Auto 1">
+        </div>
+        <div class="slide">
+          <div class="slide-text">Auto 1: SUV 2022</div>
+          <img src="./images/vett07.jpg" alt="Auto 1">
+        </div>
+        <div class="slide">
+          <div class="slide-text">Auto 1: SUV 2022</div>
+          <img src="./images/vett08.jpg" alt="Auto 1">
+        </div>
+      </div>
+      <button class="arrow right" onclick="changeSlide('vetture', 1)">❯</button>
+    </div>
+  </div>
+
+  <div class="tab-content" id="rimorchi">
+    <div class="slideshow-container">
+      <button class="arrow left" onclick="changeSlide('rimorchi', -1)">❮</button>
+      <div class="slide-track">
+        <div class="slide">
+          <div class="slide">
+          <div class="slide-text">Descrizione del contenuto</div>
+          <!-- o image: <img src="…"> oppure video: -->
+          <video muted autoplay loop playsinline>
+            <source src="./images/rimvid002.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="slide">
+          <div class="slide-text">Rimorchio 1: Modello X</div>
+          <img src="./images/rim01.jpg" alt="Rimorchio 1">
+        </div>
+        <div class="slide">
+          <div class="slide-text">Rimorchio 1: Modello X</div>
+          <img src="./images/rim02.jpg" alt="Rimorchio 1">
+        </div>
+        <div class="slide">
+          <div class="slide-text">Rimorchio 1: Modello X</div>
+          <img src="./images/rim03.jpg" alt="Rimorchio 1">
+        </div>
+        <div class="slide">
+          <div class="slide-text">Rimorchio 1: Modello X</div>
+          <img src="./images/rim04.jpg" alt="Rimorchio 1">
+        </div>
+        <div class="slide">
+          <div class="slide-text">Rimorchio 1: Modello X</div>
+          <img src="./images/rim05.jpg" alt="Rimorchio 1">
+        </div>
+        <div class="slide">
+          <div class="slide-text">Rimorchio 1: Modello X</div>
+          <img src="./images/rim06.jpg" alt="Rimorchio 1">
+        </div>
+      </div>
+      <button class="arrow right" onclick="changeSlide('rimorchi', 1)">❯</button>
+    </div>
+  </div>
+</section>
+
 
   <section class="blocco blocco5">
     <p>The most successful people don’t look back to see who’s watching. Look for opportunities to lift others up along the way.</p>
+  </section>
+
+
+<section class="blocco divisore">
+    <p>LA VOSTRA OPINIONE</p>
   </section>
 
 <section class="blocco blocco6">
   <div class="col1">
     <ul class="dettagli">
       <li>
-        <span class="voce">→ Le nostre vendite</span>
-        <p>Scopri le occasioni e le offerte attive nel nostro parco auto.</p>
-      </li>
-      <li>
-        <span class="voce">→ Garanzie</span>
-        <p>Ti offriamo garanzie fino a 36 mesi su ogni veicolo venduto.</p>
-      </li>
-      <li>
-        <span class="voce">→ Il Parco Auto</span>
-        <p>Un’ampia scelta di veicoli industriali e automobili usate certificate.</p>
+        <span class="voce">Oltre mezzo secolo di maestria su strada</span>
+        <p>Da più di 50 anni, la nostra azienda è il punto di riferimento per l'allestimento e la riparazione di veicoli industriali.
+           Generazione dopo generazione, abbiamo tramandato la passione e l'esperienza, trasformando ogni mezzo in un capolavoro di funzionalità e affidabilità.
+           Non siamo solo meccanici, siamo artigiani della strada, e la tua attività è la nostra priorità.
+           Mettiamo la stessa cura e dedizione di cinquant'anni fa in ogni saldatura, ogni bullone, ogni allestimento, garantendo soluzioni su misura che durano nel tempo.</p>
       </li>
     </ul>
   </div>
-
   <div class="col2 image-container">
     <img src="/images/family.jpg" alt="Immagine descrittiva" />
-    <div class="overlay-box">
-      <div class="box-item box1">You are on the right track</div>
-      <div class="box-item box2">OLTRE 50 ANNI DI ESPERIENZA NEL SETTORE DI ALLESTIMENTO E RIPARAZIONE VEICOLI INDUSTRIALI, RIMORCHI</div>
-    </div>
   </div>
 </section>
-<section class="blocco divisore">
-    <p>LA VOSTRA OPINIONE</p>
-  </section>
+
+
 <section class="blocco blocco7">
   <div class="testimonial">
     <p class="commento">"Servizio impeccabile, personale cordiale e disponibile!"</p>
@@ -102,13 +217,11 @@
 </section>
 
 <section class="blocco blocco8">
-  <!-- Colonna 1: Nome e descrizione -->
   <div class="col">
     <h2>WECARS</h2>
     <p>Esperienza di oltre 50 anni nel settore di allestimento e riparazione veicoli industriali, rimorchi ed auto</p>
   </div>
 
-  <!-- Colonna 2: Indirizzo e contatti -->
   <div class="col">
     <h3>ADDRESS</h3>
     <a href="https://maps.app.goo.gl/wLmEABxz92NdRhUZ9" target="_blank">
@@ -116,7 +229,6 @@
     <p><a href="mailto:v.giulianoeufemia@gmail.com">v.giulianoeufemia@gmail.com</a></p>
   </div>
 
-  <!-- Colonna 3: Social -->
  <div class="col">
     <h3>GET IN TOUCH</h3>
     <p>
@@ -136,6 +248,32 @@
     </p>
   </div>
 </section>
+
+<script>
+  const tabs = document.querySelectorAll('.tab-selector button');
+  const contents = document.querySelectorAll('.tab-content');
+  const slideIndices = { vetture: 0, rimorchi: 0, veicoli: 0 };
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => c.style.display = 'none');
+
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.tab).style.display = 'flex';
+    });
+  });
+
+  function changeSlide(tab, direction) {
+    const container = document.getElementById(tab).querySelector('.slide-track');
+    const slides = container.children.length;
+    slideIndices[tab] = (slideIndices[tab] + direction + slides) % slides;
+    container.style.transform = `translateX(-${slideIndices[tab] * 100}%)`;
+  }
+
+  // Inizializza visibilità
+  document.querySelector('[data-tab="veicoli"]').click();
+</script>
 
 </body>
 </html>
