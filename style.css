@@ -112,7 +112,7 @@ body {
 
 /* IMMAGINI SLIDESHOW*/
 .blocco4-tabs {
-  padding: 40px 5%;
+  padding: 10px 2%;
 }
 
 .tab-selector {
@@ -147,7 +147,7 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 0 50px;
+  padding: 0 30px;
 }
 
 .slide-track {
@@ -162,7 +162,7 @@ body {
   box-sizing: border-box;
   gap: 20px;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 50px;
 }
 
 .slide-text {
@@ -222,7 +222,7 @@ body {
 }
 
 .col2 {
-  flex: 2;
+  flex: 1;
   position: relative;
   align-items: center;
 }
@@ -288,7 +288,7 @@ body {
 /*COMMENTI*/
 
 .blocco7 {
-  padding: 2% 5%;
+  padding: 20px 5%;
   display: flex;
   gap: 30px;
   justify-content: space-between;
@@ -306,7 +306,7 @@ body {
 
 .commento {
   font-style: italic;
-  font-size: 1.5em;
+  font-size: 1.25em;
   color: #333;
 }
 
@@ -317,11 +317,11 @@ body {
 /*FOOTER*/
 .blocco8 {
   display: flex;
-  gap: 30px;
+  gap: 50px;
   justify-content: space-between;
   background-color: #160e0e;
   color: white;
-  padding: 40px 15%;
+  padding: 40px 12%;
   flex-wrap: wrap;
 }
 
@@ -371,28 +371,64 @@ body {
 }
 @media (max-width: 768px) {
   /*stile mobile per lo slideshow*/
-  .slide {
-    flex-direction: column;
-  }
-
-  .slide img,
-  .slide video {
-    width: 100%;
+  /* Stile mobile migliorato per slideshow */
+  html,
+  body {
+    margin: 0;
+    padding: 0;
   }
 
   .slideshow-container {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
   }
 
   .slide-track {
-    flex-wrap: nowrap;
-    width: auto;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
   }
 
   .slide {
     scroll-snap-align: start;
-    min-width: 100%;
+    flex: 0 0 100vw;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .slide img,
+  .slide video {
+    width: 100vw;
+    max-height: 85vh;
+    object-fit: contain;
+    display: block;
+    background: black;
+  }
+
+  .slide-text {
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: black;
+    background: white;
+    box-sizing: border-box;
   }
 
   .arrow {
