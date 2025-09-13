@@ -483,4 +483,29 @@ body {
     color: #ffffff;
     padding: 10px;
   }
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* il wrapper del blocco immagini non deve aggiungere padding laterale
+     se dentro usi elementi a tutta larghezza */
+  .blocco4-tabs {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* usa 100% invece di 100vw per evitare di uscire dal wrapper */
+  .slideshow-container {
+    width: 100%;
+  }
+  .slide {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+  .slide img,
+  .slide video {
+    width: 100%;
+  }
 }
