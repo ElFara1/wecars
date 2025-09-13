@@ -266,29 +266,87 @@
   </section>
 
   <script>
-    const tabs = document.querySelectorAll('.tab-selector button');
-    const contents = document.querySelectorAll('.tab-content');
-    const slideIndices = { vetture: 0, rimorchi: 0, veicoli: 0 };
+  const tabs = document.querySelectorAll('.tab-selector button');
+  const contents = document.querySelectorAll('.tab-content');
+  const slideIndices = { vetture: 0, rimorchi: 0, veicoli: 0 };
+  const TAB_IDS = Object.keys(slideIndices);
+  const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
 
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        contents.forEach(c => c.style.display = 'none');
+  function getParts(tab) {
+    const tabEl = document.getElementById(tab);
+    const container = tabEl.querySelector('.slideshow-container');
+    const track = tabEl.querySelector('.slide-track');
+    const slides = track.children.length;
+    return { tabEl, container, track, slides };
+  }
 
-        tab.classList.add('active');
-        document.getElementById(tab.dataset.tab).style.display = 'flex';
+  function gotoSlide(tab, idx, { smooth = true } = {}) {
+    const { container, track, slides } = getParts(tab);
+    const i = ((idx % slides) + slides) % slides;
+    slideIndices[tab] = i;
+
+    if (isMobile()) {
+      const scrollEl = track; // <-- SCORRI LA TRACK
+      scrollEl.scrollTo({
+        left: i * container.clientWidth, // larghezza “viewport”
+        behavior: smooth ? 'smooth' : 'auto'
       });
-    });
-
-    function changeSlide(tab, direction) {
-      const container = document.getElementById(tab).querySelector('.slide-track');
-      const slides = container.children.length;
-      slideIndices[tab] = (slideIndices[tab] + direction + slides) % slides;
-      container.style.transform = `translateX(-${slideIndices[tab] * 100}%)`;
+      track.style.transform = ''; // nessun transform in mobile
+    } else {
+      track.style.transform = `translateX(-${i * 100}%)`;
     }
+  }
+  function changeSlide(tab, direction) {
+    gotoSlide(tab, slideIndices[tab] + direction);
+  }
 
-    // Inizializza visibilità
-    document.querySelector('[data-tab="veicoli"]').click();
-  </script>
+  // Sync dello stato quando l'utente scrolla a mano in mobile
+  function attachScrollSync(tab) {
+    const { container, track } = getParts(tab);
+    const scrollEl = isMobile() ? track : container; // <-- LISTENER SULLA TRACK IN MOBILE
+    let ticking = false;
+
+    scrollEl.addEventListener('scroll', () => {
+      if (!isMobile()) return;
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const i = Math.round(scrollEl.scrollLeft / container.clientWidth);
+        slideIndices[tab] = i;
+        ticking = false;
+      });
+    }, { passive: true });
+  }
+
+  // Tabs
+  tabs.forEach(tabBtn => {
+    tabBtn.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => c.style.display = 'none');
+
+      tabBtn.classList.add('active');
+      const tabId = tabBtn.dataset.tab;
+      const panel = document.getElementById(tabId);
+      panel.style.display = 'flex';
+
+      // Porta il pannello alla slide corrente (senza animazione per evitare “salti”)
+      gotoSlide(tabId, slideIndices[tabId], { smooth: false });
+    });
+  });
+
+  // Setup iniziale
+  TAB_IDS.forEach(attachScrollSync);
+
+  // Se cambia il breakpoint, riallineiamo la vista alla slide corrente
+  window.addEventListener('resize', () => {
+    TAB_IDS.forEach(id => gotoSlide(id, slideIndices[id], { smooth: false }));
+  });
+
+  // Inizializza visibilità (seleziona "veicoli")
+  document.querySelector('[data-tab="veicoli"]').click();
+
+  // Esponi changeSlide globalmente (usata dagli onclick delle frecce)
+  window.changeSlide = changeSlide;
+</script>
 </body>
 </html>
