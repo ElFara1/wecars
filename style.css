@@ -508,4 +508,11 @@ body {
   .slide video {
     width: 100%;
   }
+  .blocco3 {
+    font-size: 1.7em;
+  }
+
+  .tab-selector button {
+    margin: 2%;
+  }
 }
