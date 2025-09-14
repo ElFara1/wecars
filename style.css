@@ -1,15 +1,19 @@
-.roboto-flex {
-  font-family: "Roboto Flex", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 100, "GRAD" 0, "XOPQ" 96, "XTRA" 468,
-    "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+:root {
+  --font-heading: "Goldman", system-ui, -apple-system, "Segoe UI", Roboto, Arial,
+    sans-serif;
+  --font-body: "Libertinus Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    Arial, sans-serif;
+}
+
+html,
+body {
+  font-family: var(--font-body);
 }
 
 body {
   margin: 0;
-  font-family: "Roboto Flex", sans-serif;
+  font-family: "Goldman", sans-serif;
+  font-size: small;
   background-color: white;
 }
 /*Elementi standard*/
@@ -69,7 +73,7 @@ body {
   left: 20px;
   color: white;
   font-size: 1.1em;
-  font-family: "Roboto Flex", sans-serif;
+  font-family: "Goldman", sans-serif;
   font-weight: 200;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   z-index: 1;
@@ -81,7 +85,7 @@ body {
   text-align: center;
   letter-spacing: 0.08em;
   font-size: 2em;
-  font-family: "Roboto Flex", sans-serif;
+  font-family: "Goldman", sans-serif;
   font-weight: 200;
 }
 .social-links {
@@ -124,6 +128,7 @@ body {
 
 .tab-selector button {
   padding: 10px 20px;
+  font-family: "Goldman", sans-serif;
   font-size: 1em;
   cursor: pointer;
   background-color: transparent;
