@@ -1,363 +1,408 @@
 <!DOCTYPE html>
 <html lang="it">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>We Cars</title>
-        <link rel="icon" type="image/x-icon" href="./favicon.ico">
-        <link rel='stylesheet' href='style.css'/>
-
-        <link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css">
-        
-        <!-- il tuo CSS dopo -->
-        <link rel="stylesheet" href="/style.css">
-        <!-- SEO Meta Tags -->
-        <title>WeCars - Auto Usate, Veicoli Industriali, Allestimenti e Riparazioni</title>
-        <meta name="description" content="WeCars è specializzata nella compravendita di auto usate e nell'allestimento e riparazione di veicoli industriali. Esperienza artigianale su misura da oltre 50 anni.">
-        <meta name="keywords" content="WeCars, auto usate, vendita auto, veicoli industriali, allestimenti veicoli, riparazione camion, paninoteca su ruote, rimorchi, officina camion">
-        <meta name="author" content="WeCars">
-
-        <!-- Open Graph (social sharing) -->
-        <meta property="og:title" content="WeCars - Auto Usate, Veicoli Industriali, Allestimenti e Riparazioni">
-        <meta property="og:description" content="Compravendita auto usate e soluzioni su misura per veicoli industriali. Allestimenti, riparazioni, rimorchi e assistenza specializzata.">
-        <meta property="og:url" content="https://www.wecars.it">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="https://www.wecars.it/images/header.jpg"> <!-- Modifica se hai un'immagine più adatta -->
-
-        <!-- Mobile -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-      </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WeCars | Auto usate e allestimenti veicoli industriali a Picerno</title>
+  <meta name="description" content="WeCars a Picerno: vendita auto usate, allestimento e riparazione di veicoli industriali e rimorchi. Oltre 50 anni di esperienza, una passione di famiglia.">
+  <meta name="theme-color" content="#121b20">
+  <link rel="canonical" href="https://www.wecars.it/">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="preload" href="./fonts/goldman-v21-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./style.css">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WeCars">
+  <meta property="og:title" content="WeCars — Il tuo lavoro. La nostra passione.">
+  <meta property="og:description" content="Auto usate, allestimenti e riparazioni di veicoli industriali. A Picerno, da oltre 50 anni.">
+  <meta property="og:url" content="https://www.wecars.it/">
+  <meta property="og:image" content="https://www.wecars.it/images/header.jpg">
+  <meta property="og:image:alt" content="WeCars Truck & Cars">
+  <script src="./script.js" defer></script>
+</head>
 <body>
-
-  <section class="blocco header">
-    <h2>WECARS</h2>
-    <h1>TRUCK & CARS</h1>
-  </section>
-
-  <section class="blocco blocco2">
-    <div class="image-wrapper">
-      <img src="./images/header.jpg" alt="Immagine principale" />
-      <div class="overlay-text">Work hard. Work smart.</div>
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html" aria-label="WeCars, homepage"><span class="brand-name">WE<b>CARS</b></span><span class="brand-caption">TRUCK &amp; CARS</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu <span aria-hidden="true">☰</span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Navigazione principale">
+        <a href="./index.html#servizi">Cosa facciamo</a>
+        <a href="./index.html#lavori">I nostri lavori</a>
+        <a href="./index.html#vetture">Vetture</a>
+        <a href="./index.html#chi-siamo">La nostra storia</a>
+        <a class="button" href="./index.html#contatti">Parliamone <span aria-hidden="true">↗</span></a>
+      </nav>
     </div>
-  </section>
-
-  <section class="blocco blocco3">
-    <p>WECARS TRUCK & CARS, VENDITA AUTO USATE E ALLESTIMENTO E RIPARAZIONE VEICOLI INDUSTRIALI</p>
-    <div class="social-links">
-      <a href="https://www.facebook.com/WeCarsItaly?locale=it_IT" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-facebook-f"></i> Facebook
-      </a>
-      <a href="https://www.instagram.com/wecarss/" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-instagram"></i> Instagram
-      </a>
-      <a href="https://wa.me/393881637717" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i> WhatsApp
-      </a>
-    </div>
-  </section>
-
-  <!-- <section class="blocco blocco5">
-    <p>The most successful people don’t look back to see who’s watching. Look for opportunities to lift others up along the way.</p>
-  </section> -->
-
-  <section class="blocco divisore">
-    <p>I NOSTRI LAVORI</p>
-  </section>
-
-<section class="blocco blocco4-tabs">
-  <div class="tab-selector">
-    <button data-tab="veicoli" class="active">Veicoli Industriali</button>
-    <button data-tab="vetture">Vetture</button>
-    <button data-tab="rimorchi">Rimorchi</button>
-  </div>
-
-  <div class="tab-content" id="veicoli" style="display: flex;">
-    <div class="slideshow-container">
-      <button class="arrow left" onclick="changeSlide('veicoli', -1)">❮</button>
-      <div class="slide-track">
-        <div class="slide">
-          <!-- o image: <img src="…"> oppure video: -->
-          <video muted autoplay loop playsinline>
-            <source src="./images/indvid001.mp4" type="video/mp4">
-          </video>
-          <div class="slide-text">allestimento paninoteca con installazione di stabilizzatori posteriori e soffioni ad aria</div>
+  </header>
+  <main id="contenuto">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-main">
+        <div class="hero-copy">
+          <p class="eyebrow">Picerno, Basilicata · Truck &amp; Cars</p>
+          <h1 id="hero-title">Il tuo lavoro.<br>La nostra<br><em>passione.</em></h1>
+          <p class="hero-description">Diamo forma ai tuoi progetti, rimettiamo in strada il tuo lavoro. Allestimenti, riparazioni e auto usate, con la cura di una famiglia.</p>
+          <div class="hero-actions">
+            <a class="button" href="#lavori">Scopri i nostri lavori <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#vetture">Esplora le vetture <span aria-hidden="true">→</span></a>
+          </div>
         </div>
-        <div class="slide">
-          <img src="./images/ind001-1.jpg" alt="Veicolo 1">
-          <div class="slide-text">Consegna Paninoteca</div>
-        </div>
-        <div class="slide">
-          <img src="./images/ind002-1.jpg" alt="Veicolo 2">
-          <div class="slide-text">Installazione gru su Iveco 150e18</div>        
-        </div>
-
-        <div class="slide">
-          <!-- o image: <img src="…"> oppure video: -->
-          <video muted autoplay loop playsinline>
-            <source src="./images/indvid003.mp4" type="video/mp4">
-          </video>
-          <div class="slide-text">Realizzazione carrellone su MAN TGA 26.400 con rampe di salita idrauliche, stabilizzatori posteriori idraulici, lucidatura della cabina e installazione di una cassetta porta attrezzi.</div>
-        </div>
-        <div class="slide">
-          <!-- o image: <img src="…"> oppure video: -->
-          <video muted autoplay loop playsinline>
-            <source src="./images/indvid004.mp4" type="video/mp4">
-          </video>
-          <div class="slide-text">Ribaltabile su Iveco 4x4</div>
+        <figure class="hero-visual">
+          <img src="./images/ind002-1.jpg" alt="Iveco 150E18 con gru allestito da WeCars, nel piazzale dell'officina" width="1179" height="892" fetchpriority="high">
+          <figcaption class="photo-caption"><span aria-hidden="true">↗</span><p>Il lavoro parla per noi.<small>Installazione gru · Iveco 150E18</small></p></figcaption>
+        </figure>
+      </div>
+      <div class="hero-foot">
+        <div class="container hero-foot-inner">
+          <div class="heritage-stat"><strong>50+</strong><span>Anni di esperienza.<br>Una passione di famiglia.</span></div>
+          <div class="hero-value"><strong>Allestimenti su misura</strong><span>Ogni mezzo, il tuo progetto.</span></div>
+          <div class="hero-value"><strong>Cura artigianale</strong><span>L'attenzione in ogni dettaglio.</span></div>
+          <div class="hero-value"><strong>Un contatto diretto</strong><span>Le persone, prima di tutto.</span></div>
         </div>
       </div>
-      <button class="arrow right" onclick="changeSlide('veicoli', 1)">❯</button>
-    </div>
-  </div>
+    </section>
 
-  <div class="tab-content" id="vetture">
-    <div class="slideshow-container">
-      <button class="arrow left" onclick="changeSlide('vetture', -1)">❮</button>
-      <div class="slide-track">
-        <div class="slide">
-          <img src="./images/vett09.jpg" alt="Auto 8">
-          <div class="slide-text">Mercedes Benz SLK200 AMG</div>
+    <section class="section services" id="servizi" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">01 / Cosa facciamo</p><h2 id="services-title">Il mezzo giusto.<br>Il lavoro fatto bene.</h2></div>
+          <p class="section-intro">Dal veicolo che accompagna la tua attività all'auto di tutti i giorni. Esperienza e soluzioni concrete, al tuo fianco.</p>
         </div>
-        <div class="slide">
-          <img src="./images/vett08.jpg" alt="Auto 8">
-          <div class="slide-text">Fiat Strada 2010</div>
-        </div>
-        <div class="slide">
-          <img src="./images/vett01.jpg" alt="Auto 1">
-          <div class="slide-text">Fiat 500x<br>Anno: 2020<br>Chilometri: 76433</div>
-        </div>
-        <div class="slide">
-          <img src="./images/vett02.jpg" alt="Auto 2">
-          <div class="slide-text">Renault Trafic isotermico<br>Anno: 2017<br>Chilometri: 112384</div>
-        </div>
-        <div class="slide">
-          <img src="./images/vett03.jpg" alt="Auto 3">
-          <div class="slide-text">Wolkswagen t-cross<br>Anno: 2020<br>Chilometri:39667</div>
-        </div>
-        <div class="slide">
-          <img src="./images/vett04.jpg" alt="Auto 4">
-          <div class="slide-text">Fiat doblò personalizzato<br>Anno: 2017<br>Chilometri: 72626</div>
-        </div>
-        <div class="slide">
-          <img src="./images/vett05.jpg" alt="Auto 5">
-          <div class="slide-text">Fiat Strada 1.3 MTJ<br>Anno 2011<br>Chilometri 154327</div>
-        </div>
-        <div class="slide">
-          <img src="./images/vett06.jpg" alt="Auto 6">
-          <div class="slide-text">Fiat Ducato 2.2<br>Anno 2012<br>Chilometri 134688</div>
-        </div>
-        <div class="slide">
-          <img src="./images/vett07.jpg" alt="Auto 7">
-          <div class="slide-text">Bmw X1 s drive<br>Anno 2017<br>Chilometri 88.000</div>
+        <div class="service-grid">
+          <a class="service-card" href="#lavori"><span class="service-number">01 — ALLESTIMENTI</span><h3>Progettati per<br>il tuo lavoro.</h3><p>Gru, ribaltabili e allestimenti speciali. Ogni veicolo prende forma intorno alle tue esigenze.</p><span class="service-arrow" aria-hidden="true">↗</span></a>
+          <a class="service-card" href="#contatti"><span class="service-number">02 — RIPARAZIONI</span><h3>Pronti a<br>ripartire.</h3><p>Interventi e riparazioni sui veicoli industriali, con attenzione alla funzionalità di ogni componente.</p><span class="service-arrow" aria-hidden="true">↗</span></a>
+          <a class="service-card" href="#lavori"><span class="service-number">03 — RIMORCHI</span><h3>Nuova vita,<br>nuova strada.</h3><p>Ripristino di pianali, vasche e coperture. Lavorazioni per rimettere in servizio il tuo rimorchio.</p><span class="service-arrow" aria-hidden="true">↗</span></a>
+          <a class="service-card" href="#vetture"><span class="service-number">04 — AUTO USATE</span><h3>La tua prossima<br>compagna di viaggio.</h3><p>Vetture e veicoli commerciali. Parliamo di ciò che cerchi e troviamo insieme la tua prossima auto.</p><span class="service-arrow" aria-hidden="true">↗</span></a>
         </div>
       </div>
-      <button class="arrow right" onclick="changeSlide('vetture', 1)">❯</button>
-    </div>
-  </div>
+    </section>
 
-  <div class="tab-content" id="rimorchi">
-    <div class="slideshow-container">
-      <button class="arrow left" onclick="changeSlide('rimorchi', -1)">❮</button>
-      <div class="slide-track">
-        <div class="slide">
-          <div class="slide-text">Rifacimento totale vasca Comec</div>
-            <video muted autoplay loop playsinline>
-              <source src="./images/rimvid002.mp4" type="video/mp4">
-            </video>
+    <section class="section works" id="lavori" aria-labelledby="works-title">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">02 / Dall'officina alla strada</p><h2 id="works-title">Fatti, non solo parole.</h2></div>
+          <p class="section-intro">Una selezione dei nostri interventi. Mezzi diversi, la stessa attenzione per un lavoro fatto bene.</p>
         </div>
-        <div class="slide">
-          <img src="./images/rim01.jpg" alt="Rimorchio 1">
-          <div class="slide-text">PRIMA:<br>Rifacimento totale pianale in alluminio su rimorchio</div>
+        <div class="filter-row" hidden>
+          <div class="filters" role="group" aria-label="Filtra i lavori per categoria">
+            <button class="filter" type="button" data-filter="all" aria-pressed="true" aria-controls="project-grid">Tutti i lavori</button>
+            <button class="filter" type="button" data-filter="industriali" aria-pressed="false" aria-controls="project-grid">Veicoli industriali</button>
+            <button class="filter" type="button" data-filter="rimorchi" aria-pressed="false" aria-controls="project-grid">Rimorchi</button>
+          </div>
+          <p class="result-count" id="project-count" role="status" aria-live="polite"></p>
         </div>
-        <div class="slide">
-          <img src="./images/rim01-1.jpg" alt="Rimorchio 1">
-          <div class="slide-text">DOPO:<br>Rifacimento totale pianale in alluminio su rimorchio</div>
+        <div class="project-grid" id="project-grid">
+          <article class="project-card" data-category="industriali" data-gallery>
+            <a class="project-image" href="./images/ind002-1.jpg" data-media data-title="Iveco 150E18 con gru installata" aria-label="Ingrandisci: Iveco 150E18 con gru installata">
+              <img src="./images/ind002-1.jpg" alt="Iveco 150E18 con gru installata" width="1179" height="892" loading="lazy" decoding="async">
+              <span class="image-open" aria-hidden="true">↗</span>
+            </a>
+            <p class="project-kind">Veicoli industriali</p>
+            <h3>Una gru. Nuove possibilità.</h3>
+            <p>Installazione gru su Iveco 150E18.</p>
+
+          </article>
+          <article class="project-card" data-category="industriali" data-gallery>
+            <a class="project-image" href="./images/ind001-1.jpg" data-media data-title="Paninoteca allestita da WeCars" aria-label="Ingrandisci: Paninoteca allestita da WeCars">
+              <img src="./images/ind001-1.jpg" alt="Paninoteca allestita da WeCars" width="1200" height="1600" loading="lazy" decoding="async">
+              <span class="image-open" aria-hidden="true">↗</span>
+            </a>
+            <p class="project-kind">Allestimenti speciali</p>
+            <h3>La tua attività, su ruote.</h3>
+            <p>Allestimento paninoteca con stabilizzatori posteriori e soffioni ad aria.</p>
+            <a class="text-link" href="./images/indvid001.mp4" data-media data-title="Paninoteca: stabilizzatori posteriori e soffioni ad aria">Guarda il video <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card" data-category="rimorchi" data-gallery>
+            <a class="project-image" href="./images/rim01-1.jpg" data-media data-title="Dopo: pianale in alluminio del rimorchio" aria-label="Ingrandisci: Dopo: pianale in alluminio del rimorchio">
+              <img src="./images/rim01-1.jpg" alt="Dopo: pianale in alluminio del rimorchio" width="1200" height="1600" loading="lazy" decoding="async">
+              <span class="image-open" aria-hidden="true">↗</span>
+            </a>
+            <p class="project-kind">Rimorchi · Prima e dopo</p>
+            <h3>Un pianale, una nuova vita.</h3>
+            <p>Rifacimento totale del pianale in alluminio su rimorchio.</p>
+            <a class="text-link" href="./images/rim01.jpg" data-media data-title="Prima: pianale del rimorchio da ripristinare">Guarda il prima <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card" data-category="industriali" data-gallery>
+            <a class="project-image video-tile" href="./images/indvid003.mp4" data-media data-title="MAN TGA 26.400" aria-label="Apri il video: MAN TGA 26.400">
+              <span>Dentro il nostro lavoro</span><span class="play-symbol" aria-hidden="true">▷</span>
+              <strong>MAN TGA 26.400</strong><span class="image-open" aria-hidden="true">↗</span>
+            </a>
+            <p class="project-kind">Veicoli industriali</p>
+            <h3>MAN TGA 26.400</h3>
+            <p>Carrellone con rampe e stabilizzatori posteriori idraulici, lucidatura della cabina e cassetta porta attrezzi.</p>
+
+          </article>
+          <article class="project-card" data-category="industriali" data-gallery>
+            <a class="project-image video-tile" href="./images/indvid004.mp4" data-media data-title="Ribaltabile Iveco 4×4" aria-label="Apri il video: Ribaltabile Iveco 4×4">
+              <span>Dentro il nostro lavoro</span><span class="play-symbol" aria-hidden="true">▷</span>
+              <strong>Ribaltabile Iveco 4×4</strong><span class="image-open" aria-hidden="true">↗</span>
+            </a>
+            <p class="project-kind">Veicoli industriali</p>
+            <h3>Ribaltabile Iveco 4×4</h3>
+            <p>Allestimento ribaltabile su Iveco 4×4.</p>
+
+          </article>
+          <article class="project-card" data-category="rimorchi" data-gallery>
+            <a class="project-image video-tile" href="./images/rimvid002.mp4" data-media data-title="Vasca Comec" aria-label="Apri il video: Vasca Comec">
+              <span>Dentro il nostro lavoro</span><span class="play-symbol" aria-hidden="true">▷</span>
+              <strong>Vasca Comec</strong><span class="image-open" aria-hidden="true">↗</span>
+            </a>
+            <p class="project-kind">Rimorchi</p>
+            <h3>Vasca Comec</h3>
+            <p>Rifacimento totale della vasca.</p>
+
+          </article>
+          <article class="project-card" data-category="rimorchi" data-gallery>
+            <a class="project-image" href="./images/rim03.jpg" data-media data-title="Tetto copri e scopri installato su rimorchio" aria-label="Ingrandisci: Tetto copri e scopri installato su rimorchio">
+              <img src="./images/rim03.jpg" alt="Tetto copri e scopri installato su rimorchio" width="894" height="1239" loading="lazy" decoding="async">
+              <span class="image-open" aria-hidden="true">↗</span>
+            </a>
+            <p class="project-kind">Rimorchi</p>
+            <h3>Copri e scopri</h3>
+            <p>Installazione del tetto copri e scopri su rimorchio.</p>
+
+          </article>
+          <article class="project-card" data-category="rimorchi" data-gallery>
+            <a class="project-image" href="./images/rim04.jpg" data-media data-title="Pianale del rimorchio Menci dopo il rifacimento" aria-label="Ingrandisci: Pianale del rimorchio Menci dopo il rifacimento">
+              <img src="./images/rim04.jpg" alt="Pianale del rimorchio Menci dopo il rifacimento" width="906" height="1600" loading="lazy" decoding="async">
+              <span class="image-open" aria-hidden="true">↗</span>
+            </a>
+            <p class="project-kind">Rimorchi</p>
+            <h3>Pianale Menci</h3>
+            <p>Rifacimento totale del pianale del rimorchio.</p>
+
+          </article>
+          <article class="project-card" data-category="rimorchi" data-gallery>
+            <a class="project-image" href="./images/rim05.jpg" data-media data-title="Copertura copri e scopri su rimorchio a quattro assi" aria-label="Ingrandisci: Copertura copri e scopri su rimorchio a quattro assi">
+              <img src="./images/rim05.jpg" alt="Copertura copri e scopri su rimorchio a quattro assi" width="1179" height="1600" loading="lazy" decoding="async">
+              <span class="image-open" aria-hidden="true">↗</span>
+            </a>
+            <p class="project-kind">Rimorchi</p>
+            <h3>Copertura su quattro assi</h3>
+            <p>Installazione del tetto copri e scopri su quattro assi.</p>
+
+          </article>
+          <article class="project-card" data-category="rimorchi" data-gallery>
+            <a class="project-image" href="./images/rim06.jpg" data-media data-title="Frontale modificato del rimorchio Pagano" aria-label="Ingrandisci: Frontale modificato del rimorchio Pagano">
+              <img src="./images/rim06.jpg" alt="Frontale modificato del rimorchio Pagano" width="942" height="1600" loading="lazy" decoding="async">
+              <span class="image-open" aria-hidden="true">↗</span>
+            </a>
+            <p class="project-kind">Rimorchi</p>
+            <h3>Frontale Pagano</h3>
+            <p>Modifica del frontale del rimorchio Pagano.</p>
+
+          </article>
         </div>
-        <div class="slide">
-          <img src="./images/rim03.jpg" alt="Rimorchio 1">
-          <div class="slide-text">Installazione tetto copri e scopri su rimorchio</div>
+        <div class="more-row"><button class="button button-outline" id="more-projects" type="button" aria-expanded="false" aria-controls="project-grid" hidden>Mostra tutti i lavori +</button></div>
+      </div>
+    </section>
+
+    <section class="section cars" id="vetture" aria-labelledby="cars-title">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">03 / Vetture e veicoli commerciali</p><h2 id="cars-title">La tua prossima strada.</h2></div>
+          <a class="text-link" href="https://wa.me/393881637717?text=Ciao%20WeCars%2C%20sto%20cercando%20un%27auto.%20Potete%20aiutarmi%3F" target="_blank" rel="noopener noreferrer">Raccontaci cosa cerchi <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="slide">
-          <img src="./images/rim04.jpg" alt="Rimorchio 1">
-          <div class="slide-text">Rifacimento totale pianale rimorchio Menci</div>
+        <div class="car-grid" id="car-grid">
+          <article class="car-card">
+            <a class="car-image" href="./images/vett09.jpg" data-media data-title="Mercedes-Benz SLK200 AMG" aria-label="Ingrandisci la foto: Mercedes-Benz SLK200 AMG">
+              <img src="./images/vett09.jpg" alt="Mercedes-Benz SLK200 AMG fotografata nel piazzale WeCars" width="1200" height="1600" loading="lazy" decoding="async">
+              <span class="image-open" aria-hidden="true">↗</span>
+            </a>
+            <div class="car-body">
+              <p class="car-label">Vetture</p>
+              <h3>Mercedes-Benz SLK200 AMG</h3>
+              <p class="car-specs"><span>Informazioni su richiesta</span></p>
+              <a class="text-link" href="https://wa.me/393881637717?text=Ciao%20WeCars%2C%20vorrei%20informazioni%20e%20disponibilit%C3%A0%20per%20Mercedes-Benz%20SLK200%20AMG." target="_blank" rel="noopener noreferrer" aria-label="Chiedi informazioni su Mercedes-Benz SLK200 AMG tramite WhatsApp">Richiedi informazioni <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="car-card">
+            <a class="car-image" href="./images/vett01.jpg" data-media data-title="Fiat 500X" aria-label="Ingrandisci la foto: Fiat 500X">
+              <img src="./images/vett01.jpg" alt="Fiat 500X fotografata nel piazzale WeCars" width="1179" height="948" loading="lazy" decoding="async">
+              <span class="image-open" aria-hidden="true">↗</span>
+            </a>
+            <div class="car-body">
+              <p class="car-label">Vetture</p>
+              <h3>Fiat 500X</h3>
+              <p class="car-specs"><span>2020</span><span>76.433 km</span></p>
+              <a class="text-link" href="https://wa.me/393881637717?text=Ciao%20WeCars%2C%20vorrei%20informazioni%20e%20disponibilit%C3%A0%20per%20Fiat%20500X." target="_blank" rel="noopener noreferrer" aria-label="Chiedi informazioni su Fiat 500X tramite WhatsApp">Richiedi informazioni <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="car-card">
+            <a class="car-image" href="./images/vett07.jpg" data-media data-title="BMW X1 sDrive" aria-label="Ingrandisci la foto: BMW X1 sDrive">
+              <img src="./images/vett07.jpg" alt="BMW X1 sDrive fotografata nel piazzale WeCars" width="1179" height="1147" loading="lazy" decoding="async">
+              <span class="image-open" aria-hidden="true">↗</span>
+            </a>
+            <div class="car-body">
+              <p class="car-label">Vetture</p>
+              <h3>BMW X1 sDrive</h3>
+              <p class="car-specs"><span>2017</span><span>88.000 km</span></p>
+              <a class="text-link" href="https://wa.me/393881637717?text=Ciao%20WeCars%2C%20vorrei%20informazioni%20e%20disponibilit%C3%A0%20per%20BMW%20X1%20sDrive." target="_blank" rel="noopener noreferrer" aria-label="Chiedi informazioni su BMW X1 sDrive tramite WhatsApp">Richiedi informazioni <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="car-card">
+            <a class="car-image" href="./images/vett08.jpg" data-media data-title="Fiat Strada" aria-label="Ingrandisci la foto: Fiat Strada">
+              <img src="./images/vett08.jpg" alt="Fiat Strada fotografata nel piazzale WeCars" width="1200" height="1600" loading="lazy" decoding="async">
+              <span class="image-open" aria-hidden="true">↗</span>
+            </a>
+            <div class="car-body">
+              <p class="car-label">Veicoli commerciali</p>
+              <h3>Fiat Strada</h3>
+              <p class="car-specs"><span>2010</span></p>
+              <a class="text-link" href="https://wa.me/393881637717?text=Ciao%20WeCars%2C%20vorrei%20informazioni%20e%20disponibilit%C3%A0%20per%20Fiat%20Strada." target="_blank" rel="noopener noreferrer" aria-label="Chiedi informazioni su Fiat Strada tramite WhatsApp">Richiedi informazioni <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="car-card">
+            <a class="car-image" href="./images/vett02.jpg" data-media data-title="Renault Trafic isotermico" aria-label="Ingrandisci la foto: Renault Trafic isotermico">
+              <img src="./images/vett02.jpg" alt="Renault Trafic isotermico fotografata nel piazzale WeCars" width="1179" height="986" loading="lazy" decoding="async">
+              <span class="image-open" aria-hidden="true">↗</span>
+            </a>
+            <div class="car-body">
+              <p class="car-label">Veicoli commerciali</p>
+              <h3>Renault Trafic isotermico</h3>
+              <p class="car-specs"><span>2017</span><span>112.384 km</span></p>
+              <a class="text-link" href="https://wa.me/393881637717?text=Ciao%20WeCars%2C%20vorrei%20informazioni%20e%20disponibilit%C3%A0%20per%20Renault%20Trafic%20isotermico." target="_blank" rel="noopener noreferrer" aria-label="Chiedi informazioni su Renault Trafic isotermico tramite WhatsApp">Richiedi informazioni <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="car-card">
+            <a class="car-image" href="./images/vett03.jpg" data-media data-title="Volkswagen T-Cross" aria-label="Ingrandisci la foto: Volkswagen T-Cross">
+              <img src="./images/vett03.jpg" alt="Volkswagen T-Cross fotografata nel piazzale WeCars" width="1179" height="1046" loading="lazy" decoding="async">
+              <span class="image-open" aria-hidden="true">↗</span>
+            </a>
+            <div class="car-body">
+              <p class="car-label">Vetture</p>
+              <h3>Volkswagen T-Cross</h3>
+              <p class="car-specs"><span>2020</span><span>39.667 km</span></p>
+              <a class="text-link" href="https://wa.me/393881637717?text=Ciao%20WeCars%2C%20vorrei%20informazioni%20e%20disponibilit%C3%A0%20per%20Volkswagen%20T-Cross." target="_blank" rel="noopener noreferrer" aria-label="Chiedi informazioni su Volkswagen T-Cross tramite WhatsApp">Richiedi informazioni <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="car-card">
+            <a class="car-image" href="./images/vett04.jpg" data-media data-title="Fiat Doblò personalizzato" aria-label="Ingrandisci la foto: Fiat Doblò personalizzato">
+              <img src="./images/vett04.jpg" alt="Fiat Doblò personalizzato fotografata nel piazzale WeCars" width="1082" height="1105" loading="lazy" decoding="async">
+              <span class="image-open" aria-hidden="true">↗</span>
+            </a>
+            <div class="car-body">
+              <p class="car-label">Veicoli commerciali</p>
+              <h3>Fiat Doblò personalizzato</h3>
+              <p class="car-specs"><span>2017</span><span>72.626 km</span></p>
+              <a class="text-link" href="https://wa.me/393881637717?text=Ciao%20WeCars%2C%20vorrei%20informazioni%20e%20disponibilit%C3%A0%20per%20Fiat%20Dobl%C3%B2%20personalizzato." target="_blank" rel="noopener noreferrer" aria-label="Chiedi informazioni su Fiat Doblò personalizzato tramite WhatsApp">Richiedi informazioni <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="car-card">
+            <a class="car-image" href="./images/vett05.jpg" data-media data-title="Fiat Strada 1.3 MTJ" aria-label="Ingrandisci la foto: Fiat Strada 1.3 MTJ">
+              <img src="./images/vett05.jpg" alt="Fiat Strada 1.3 MTJ fotografata nel piazzale WeCars" width="1179" height="1208" loading="lazy" decoding="async">
+              <span class="image-open" aria-hidden="true">↗</span>
+            </a>
+            <div class="car-body">
+              <p class="car-label">Veicoli commerciali</p>
+              <h3>Fiat Strada 1.3 MTJ</h3>
+              <p class="car-specs"><span>2011</span><span>154.327 km</span></p>
+              <a class="text-link" href="https://wa.me/393881637717?text=Ciao%20WeCars%2C%20vorrei%20informazioni%20e%20disponibilit%C3%A0%20per%20Fiat%20Strada%201.3%20MTJ." target="_blank" rel="noopener noreferrer" aria-label="Chiedi informazioni su Fiat Strada 1.3 MTJ tramite WhatsApp">Richiedi informazioni <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="car-card">
+            <a class="car-image" href="./images/vett06.jpg" data-media data-title="Fiat Ducato 2.2" aria-label="Ingrandisci la foto: Fiat Ducato 2.2">
+              <img src="./images/vett06.jpg" alt="Fiat Ducato 2.2 fotografata nel piazzale WeCars" width="1179" height="1302" loading="lazy" decoding="async">
+              <span class="image-open" aria-hidden="true">↗</span>
+            </a>
+            <div class="car-body">
+              <p class="car-label">Veicoli commerciali</p>
+              <h3>Fiat Ducato 2.2</h3>
+              <p class="car-specs"><span>2012</span><span>134.688 km</span></p>
+              <a class="text-link" href="https://wa.me/393881637717?text=Ciao%20WeCars%2C%20vorrei%20informazioni%20e%20disponibilit%C3%A0%20per%20Fiat%20Ducato%202.2." target="_blank" rel="noopener noreferrer" aria-label="Chiedi informazioni su Fiat Ducato 2.2 tramite WhatsApp">Richiedi informazioni <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
         </div>
-        <div class="slide">
-          <img src="./images/rim05.jpg" alt="Rimorchio 1">
-          <div class="slide-text">Installazione tetto copri e scopri su 4 assi</div>
+        <p class="availability-note">Le vetture presentate potrebbero non essere più disponibili. Contattaci per confermare disponibilità, caratteristiche e condizioni.</p>
+        <div class="more-row"><button class="button button-outline" id="more-cars" type="button" aria-expanded="false" aria-controls="car-grid" hidden>Esplora tutte le vetture +</button></div>
+      </div>
+    </section>
+
+    <section class="section story" id="chi-siamo" aria-labelledby="story-title">
+      <div class="container story-grid">
+        <div class="story-image">
+          <img src="./images/family.jpg" alt="La famiglia WeCars riunita" width="767" height="504" loading="lazy" decoding="async">
+          <div class="story-badge"><strong>50+</strong><span>anni di esperienza,<br>generazione dopo generazione.</span></div>
         </div>
-        <div class="slide">
-          <img src="./images/rim06.jpg" alt="Rimorchio 1">
-          <div class="slide-text">Modifica frontale rimorchio pagano</div>
+        <div class="story-copy">
+          <p class="eyebrow">04 / La nostra famiglia</p>
+          <h2 id="story-title">Prima dei motori,<br>ci sono le persone.</h2>
+          <p>Da più di cinquant'anni, l'allestimento e la riparazione di veicoli industriali fanno parte della nostra storia. Una passione che si tramanda, insieme all'esperienza e alla voglia di fare bene.</p>
+          <p>In ogni saldatura, ogni bullone e ogni allestimento mettiamo la stessa cura di sempre. Perché dietro un mezzo c'è il lavoro di qualcuno. E per noi, il tuo lavoro conta.</p>
+          <a class="text-link" href="#contatti">Vieni a conoscerci <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-      <button class="arrow right" onclick="changeSlide('rimorchi', 1)">❯</button>
+    </section>
+
+    <section class="section reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">05 / La vostra opinione</p><h2 id="reviews-title">La fiducia si costruisce.</h2></div>
+          <p class="section-intro">Le parole di chi ci ha scelto.</p>
+        </div>
+        <div class="review-grid">
+          <figure class="review"><span class="quote-mark" aria-hidden="true">“</span><blockquote>Ho acquistato una panda, consegna veloce e ottimo trattamento qualità prezzo. Sono stati gentilissimi in più mi hanno consegnato gratuitamente l'auto a casa. Consigliatissimo</blockquote><figcaption>Pietro D.</figcaption></figure>
+          <figure class="review"><span class="quote-mark" aria-hidden="true">“</span><blockquote>Il top. Competenza e professionalità. Consigliatissimo!</blockquote><figcaption>Daniele B.</figcaption></figure>
+          <figure class="review"><span class="quote-mark" aria-hidden="true">“</span><blockquote>grande serietà e massima affidabilità. Un ringraziamento speciale a tutta l'azienda ed in particolare a Giuliano, top!!!</blockquote><figcaption>Andrea D.</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contatti" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Facciamo strada, insieme.</p>
+          <h2 id="contact-title">Hai un progetto?<br>Parliamone.</h2>
+          <p class="contact-intro">Un allestimento da realizzare, un mezzo da riparare o un'auto da trovare. Il primo passo è una chiacchierata.</p>
+          <div class="contact-actions">
+            <a class="button" href="https://wa.me/393881637717" target="_blank" rel="noopener noreferrer">Scrivici su WhatsApp <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="tel:+393881637717">Chiamaci <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <dl class="contact-details">
+          <div class="contact-detail"><dt>Vieni a trovarci</dt><dd><a href="https://maps.app.goo.gl/wLmEABxz92NdRhUZ9" target="_blank" rel="noopener noreferrer">Strada Otranto, Picerno (PZ) · 85055<small>Apri le indicazioni stradali ↗</small></a></dd></div>
+          <div class="contact-detail"><dt>Telefono e WhatsApp</dt><dd><a href="tel:+393881637717">+39 388 163 7717</a></dd></div>
+          <div class="contact-detail"><dt>Email</dt><dd><a href="mailto:v.giulianoeufemia@gmail.com">v.giulianoeufemia@gmail.com ↗</a></dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a class="brand" href="./index.html" aria-label="WeCars, homepage"><span class="brand-name">WE<b>CARS</b></span><span class="brand-caption">TRUCK &amp; CARS</span></a>
+          <p class="footer-tagline">Work hard. Work smart.</p>
+        </div>
+        <nav class="social-links" aria-label="Seguici sui social">
+          <a href="https://www.instagram.com/wecarss/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+          <a href="https://www.facebook.com/WeCarsItaly?locale=it_IT" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+          <a href="https://wa.me/393881637717" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>© WeCars S.R.L. · Picerno, Basilicata</p>
+        <nav class="legal-links" aria-label="Informazioni legali">
+          <a href="./privacy-policy.html">Privacy policy</a>
+          <a href="./cookie-policy.html">Cookie policy</a>
+          <a href="./termini-e-condizioni.html">Termini e condizioni</a>
+        </nav>
+        <a href="#contenuto">Torna su ↑</a>
+      </div>
     </div>
-  </div>
-</section>
-
-  <section class="blocco divisore">
-    <p>LA NOSTRA FAMIGLIA</p>
-  </section>
-
-  <section class="blocco blocco6">
-    <div class="col1">
-      <ul class="dettagli">
-        <li>
-          <span class="voce">Oltre mezzo secolo di maestria su strada</span>
-          <p>Da più di 50 anni, la nostra azienda è il punto di riferimento per l'allestimento e la riparazione di veicoli industriali.
-             Generazione dopo generazione, abbiamo tramandato la passione e l'esperienza, trasformando ogni mezzo in un capolavoro di funzionalità e affidabilità.
-             Non siamo solo meccanici, siamo artigiani della strada, e la tua attività è la nostra priorità.
-             Mettiamo la stessa cura e dedizione di cinquant'anni fa in ogni saldatura, ogni bullone, ogni allestimento, garantendo soluzioni su misura che durano nel tempo.</p>
-        </li>
-      </ul>
+  </footer>
+  <dialog class="media-dialog" id="media-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-header"><h2 id="dialog-title">I nostri lavori</h2><button class="dialog-close" type="button" aria-label="Chiudi la galleria" autofocus>✕</button></div>
+    <div class="dialog-media"></div>
+    <p class="dialog-status" role="status"></p>
+    <div class="dialog-footer">
+      <a id="media-original" href="./images/ind002-1.jpg" target="_blank" rel="noopener noreferrer">Apri il file originale ↗</a>
+      <div class="dialog-navigation">
+        <button class="dialog-arrow" type="button" data-direction="-1" aria-label="Contenuto precedente">←</button>
+        <span class="dialog-counter" aria-live="polite"></span>
+        <button class="dialog-arrow" type="button" data-direction="1" aria-label="Contenuto successivo">→</button>
+      </div>
     </div>
-    <div class="col2 image-container">
-      <img src="./images/family.jpg" alt="Immagine descrittiva" />
-    </div>
-  </section>
-
-  <section class="blocco divisore">
-    <p>LA VOSTRA OPINIONE</p>
-  </section>
-
-  <section class="blocco blocco7">
-    <div class="testimonial">
-      <p class="commento">"Ho acquistato una panda, consegna veloce e ottimo trattamento qualità prezzo.<br>Sono stati gentilissimi in più mi hanno consegnato gratuitamente l'auto a casa.<br>Consigliatissimo"</p>
-      <p class="cliente">Pietro D.</p>
-    </div>
-    <div class="testimonial">
-      <p class="commento">"Il top. Competenza e professionalità. Consigliatissimo!"</p>
-      <p class="cliente">Daniele B.</p>
-    </div>
-    <div class="testimonial">
-      <p class="commento">"grande serietà e massima affidabilità. <br>Un ringraziamento speciale a tutta l'azienda ed in particolare a Giuliano, top!!!"</p>
-      <p class="cliente">Andrea D.</p>
-    </div>
-  </section>
-
-  <section class="blocco blocco8">
-    <div class="col">
-      <h2>WECARS</h2>
-      <p>Esperienza di oltre 50 anni nel settore di allestimento e riparazione veicoli industriali, rimorchi ed auto</p>
-    </div>
-
-    <div class="col">
-      <h3>ADDRESS</h3>
-      <a href="https://maps.app.goo.gl/wLmEABxz92NdRhUZ9" target="_blank" rel="noopener noreferrer">
-        Strada Otranto Picerno, PZ 85055</a>
-      <p><a href="mailto:v.giulianoeufemia@gmail.com">v.giulianoeufemia@gmail.com</a></p>
-    </div>
-
-    <div class="col">
-      <h3>GET IN TOUCH</h3>
-      <p>
-        <a href="https://www.facebook.com/WeCarsItaly?locale=it_IT" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-facebook-f"></i> Facebook
-        </a>
-      </p>
-      <p>
-        <a href="https://www.instagram.com/wecarss/" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-instagram"></i> Instagram
-        </a>
-      </p>
-      <p>
-        <a href="https://wa.me/393881637717" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
-      </p>
-    </div>
-    <div class="col">
-      <h3>LEGAL</h3>
-      <p><a href="/privacy-policy.html">Privacy Policy</a></p>
-      <p><a href="/cookie-policy.html">Cookie Policy</a></p>
-      <p><a href="/termini-e-condizioni.html">Termini e condizioni</a></p>
-    </div>
-
-  </section>
-
-  <script>
-  const tabs = document.querySelectorAll('.tab-selector button');
-  const contents = document.querySelectorAll('.tab-content');
-  const slideIndices = { vetture: 0, rimorchi: 0, veicoli: 0 };
-  const TAB_IDS = Object.keys(slideIndices);
-  const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
-
-  function getParts(tab) {
-    const tabEl = document.getElementById(tab);
-    const container = tabEl.querySelector('.slideshow-container');
-    const track = tabEl.querySelector('.slide-track');
-    const slides = track.children.length;
-    return { tabEl, container, track, slides };
-  }
-
-  function gotoSlide(tab, idx, { smooth = true } = {}) {
-    const { container, track, slides } = getParts(tab);
-    const i = ((idx % slides) + slides) % slides;
-    slideIndices[tab] = i;
-
-    if (isMobile()) {
-      const scrollEl = track; // <-- SCORRI LA TRACK
-      scrollEl.scrollTo({
-        left: i * container.clientWidth, // larghezza “viewport”
-        behavior: smooth ? 'smooth' : 'auto'
-      });
-      track.style.transform = ''; // nessun transform in mobile
-    } else {
-      track.style.transform = `translateX(-${i * 100}%)`;
-    }
-  }
-  function changeSlide(tab, direction) {
-    gotoSlide(tab, slideIndices[tab] + direction);
-  }
-
-  // Sync dello stato quando l'utente scrolla a mano in mobile
-  function attachScrollSync(tab) {
-    const { container, track } = getParts(tab);
-    const scrollEl = isMobile() ? track : container; // <-- LISTENER SULLA TRACK IN MOBILE
-    let ticking = false;
-
-    scrollEl.addEventListener('scroll', () => {
-      if (!isMobile()) return;
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        const i = Math.round(scrollEl.scrollLeft / container.clientWidth);
-        slideIndices[tab] = i;
-        ticking = false;
-      });
-    }, { passive: true });
-  }
-
-  // Tabs
-  tabs.forEach(tabBtn => {
-    tabBtn.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      contents.forEach(c => c.style.display = 'none');
-
-      tabBtn.classList.add('active');
-      const tabId = tabBtn.dataset.tab;
-      const panel = document.getElementById(tabId);
-      panel.style.display = 'flex';
-
-      // Porta il pannello alla slide corrente (senza animazione per evitare “salti”)
-      gotoSlide(tabId, slideIndices[tabId], { smooth: false });
-    });
-  });
-
-  // Setup iniziale
-  TAB_IDS.forEach(attachScrollSync);
-
-  // Se cambia il breakpoint, riallineiamo la vista alla slide corrente
-  window.addEventListener('resize', () => {
-    TAB_IDS.forEach(id => gotoSlide(id, slideIndices[id], { smooth: false }));
-  });
-
-  // Inizializza visibilità (seleziona "veicoli")
-  document.querySelector('[data-tab="veicoli"]').click();
-
-  // Esponi changeSlide globalmente (usata dagli onclick delle frecce)
-  window.changeSlide = changeSlide;
-</script>
+  </dialog>
 </body>
 </html>
